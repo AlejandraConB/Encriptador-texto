@@ -1,3 +1,11 @@
+- Desafío de Oracle Next Education (Alura Latam + Oracle). Consiste en crear una aplicación que encripta textos. 
+
+## 🔎 Requisitos:
+
+- Debe funcionar solo con letras minúsculas. 
+- No deben ser utilizados letras con acentos ni caracteres especiales. 
+- Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original. 
+
 ## 🖥️ Tecnologías Utilizadas:
 
 - JavaScript
@@ -5,12 +13,6 @@
 - HTML
 - Visual Studio Code
 </br>
-
-## 🔎 Requisitos:
-
-- Debe funcionar solo con letras minúsculas. 
-- No deben ser utilizados letras con acentos ni caracteres especiales. 
-- Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original. 
 
 💙 <strong>Alejandra Contreras</strong></br>
 <a href="https://www.linkedin.com/in/alejandraconb/" target="_blank">
