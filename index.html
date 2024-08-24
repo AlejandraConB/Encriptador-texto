@@ -14,28 +14,26 @@
 <body>
     <header class="header">
         <div class="contenedor-alura">
-            <img src="./src/logo-alura.png" alt="logo de alura latam">
+            <img class=imagen-alura src="./src/logo-alura.png" alt="logo de alura latam" width="50px" height="50px">
         </div>
     </header>
 
     <main class="caja-texto">
-        <section class="contenido-encriptar">
-            <div class="contendor-cajita">
-              <h1 class="contenido-encriptar-titulo">Ingresa el texto aquí</h1>
-             </div>
-        <section/>
+        <section>
+          <div class="contenido-encriptar">
+             <textarea name="text_in_area" id="texto" placeholder="Ingrese el texto aquí" required></textarea>
+         </div>
+         <div class="sector-botones">
+              <input class="boton-encriptar-descriptar" type="button" value="Encriptar"/>
+              <input class="boton-encriptar-descriptar"type="button" value="Descriptar"/>
+          </div>
+        </section>
 
-  <section>
-    <div class="sector-botones">
-        <buttom class="boton-encriptar-descriptar" type="buttom" >Encriptar</buttom>
-        <buttom class="boton-encriptar-descriptar"type="buttom" >Descriptar</buttom>
-    </div>
-  </section>
-</main>
+    </main>
   <!-- Pie de página -->
   <footer class="pie-pagina">
     <p>&copy;Alejandra Contreras 2024. Chile. </p>
 </footer>
 </body>
-<script></script>
+<script>src="app.js"</script>
 </html>
