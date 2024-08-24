@@ -9,9 +9,9 @@
   }
 
   :root {
-    --color-primario:#00FFCA;
+    --color-primario:linear-gradient(to right, #1fefec 0%, #008fd6 100%);
     --color-secundario:#002B5B;
-    --color-terciario:#05BFDB;
+    --color-terciario:#36C2CE;
     --color-cuaternario:#159895;
     --color-encriptador:#A3DFE0;
     --fuente-arial: arial,sans-serif;
@@ -20,7 +20,7 @@
   body {
       font-family:  Arial, Garamond, sans-serif;
       display: grid;
-      background-color:var(--color-primario);
+      background-image:var(--color-primario);
       opacity: 1;
       color:var(--color-secundario);
       box-sizing: border-box;
