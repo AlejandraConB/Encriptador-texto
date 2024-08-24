@@ -27,14 +27,19 @@
       min-height: 100 vh
   }
 
-  .area-texto{
-
+  .seccion-alura{
+    width:100%;
+    height:100%;
+    max-width: 1440px;
+    margin:auto;
   }
 
   .contenedor-alura{
-    position:relative;
-    left:80px;
-    top:40px;
+   margin: 40px 80px;
+   width:100%;
+   height:100%;
+   display: flex;
+   justify-content: left;
   }
 
   .imagen-alura{
@@ -64,6 +69,27 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .area-texto{
+
+  }
+
+  .texto-info{
+
+  }
+
+  .info{
+
+  }
+
+  .icono{
+
+  }
+
+  .advertencia{
+
+  }
+
 
   .sector-botones{
     display:flex;
