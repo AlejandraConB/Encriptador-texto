@@ -1,5 +1,5 @@
 # :books: Desafío de Oracle Next Education (Alura Latam + Oracle).
-<center>Consiste en crear una aplicación que encripta textos.</center>
+## Consiste en crear una aplicación que encripta textos.
 </br>
 
 ## 🔎 Requisitos:
