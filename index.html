@@ -6,7 +6,7 @@
     <meta name="description" content="Encriptador de texto Oracle Next Education">
     <meta name="keywords" content="JavaScript, HTML,CSS">
     <meta name="author" content="Alejandra Contreras">
-    <link rel="icon" href="assets/Flor.png" type="image/x-icon">
+    <link rel="icon" href="src/Flor.png" type="image/x-icon">
     <link rel="stylesheet" href="src/styles.css">
     <title>Encriptador de Texto Alejandra Contreras</title>
 </head>
@@ -18,18 +18,28 @@
         </div>
     </header>
 
-    <main class="caja-texto">
-        <section>
+    <main>
+        <section class="caja-contenido">
           <div class="contenido-encriptar">
-             <textarea name="text_in_area" id="texto" placeholder="Ingrese el texto aquí" required></textarea>
-         </div>
-         <div class="sector-botones">
+            <form class="formulario-encriptador">
+                <div class="texto-interior">
+                  <textarea name="text_in_area" id="area-texto" placeholder="Ingrese el texto aquí" required></textarea>
+                  <div class="-texto-info">
+                    <div class="info">
+                        <img class=icono src="./src/exclamation.png>
+                    <h6 id="advertencia">Solo letras minúsculas y sin acentos</h6>
+                    </div>
+                  <div class="sector-botones">
               <input class="boton-encriptar-descriptar" type="button" value="Encriptar"/>
               <input class="boton-encriptar-descriptar"type="button" value="Descriptar"/>
+                </div>
+            </div>
           </div>
+        </form>
         </section>
 
     </main>
+    
   <!-- Pie de página -->
   <footer class="pie-pagina">
     <p>&copy;Alejandra Contreras 2024. Chile. </p>
