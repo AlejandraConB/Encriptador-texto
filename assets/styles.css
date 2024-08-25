@@ -27,7 +27,6 @@
       display: grid;
       line-height: 150%;
       background-image:var(--color-primario);
-      opacity: 1;
       color:var(--color-secundario);
   }
 
@@ -46,13 +45,17 @@
 
   .area-texto{
     width: 100%;
-    height: 200px;
     max-width: 600px;
     border:none;
     background:none;
     color:var(--color-secundario);
     margin-top: 70px;
     text-transform: lowercase;
+  }
+
+  .contenido-encriptador{
+    display: flex;
+    flex-direction: column;
   }
 
   ::placeholder { color:var(--color-secundario);}
@@ -80,7 +83,6 @@
   }
 
   .sector-botones{
-    background-color: antiquewhite;
     display:flex;
     space:space-between;
     margin-top: 5px;
@@ -143,7 +145,7 @@
     text-decoration:none;
     justify-content: center;
     margin-left: 108px;
-    margin-top: 402px;
+    margin-top: 395px;
     position: absolute;
     width: 240px;
     align-items: center;
@@ -155,19 +157,17 @@
   }
 
   .texto-info{
-    background-color: antiquewhite;
     font-family: var(--fuente-arial);
   }
 
   .icono{
     padding-top: 20px;
     margin-left: -10px;
-    margin-bottom: -62px;
+    margin-bottom: -72px;
     width: 2.2%;
   }
 
   .advertencia{
-    background-color: antiquewhite;
     font-family: var(--fuente-arial);
     color:var(--color-secundario);
     font-size: 12px;
