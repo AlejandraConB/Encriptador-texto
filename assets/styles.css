@@ -15,6 +15,7 @@
     --color-cuaternario:#1A5F7A;
     --color-hover-1:#088395;
     --color-hover-2:#00FFCA;
+    --fondo-del-encriptador:#ffff;
     --fuente-arial: arial,sans-serif;
   }
 
@@ -34,6 +35,7 @@
     padding-top: 20px;
     margin-left: 40px;
     width: 4%;
+    border-radius:5px;
   }
 
   .main{
@@ -42,12 +44,9 @@
     margin-left: 80px;
   }
 
-  .contenido-encriptador{
-
-  }
-
   .area-texto{
     border:none;
+    background: none;
     color:var(--color-secundario);
     margin-top: 90px;
     text-transform: lowercase;
@@ -64,25 +63,6 @@
     font-family: var(--fuente-arial);
   }
 
-  .seccion-alura{
-    width:100%;
-    height:100%;
-    max-width: 1440px;
-    margin:auto;
-  }
-
-  .contenedor-alura{
-   margin: 40px 80px;
-   width:100%;
-   height:100%;
-   display: flex;
-   justify-content: left;
-  }
-
-  .imagen-alura{
-    border-radius: 5px;
-  }
-
   .texto-interior{
     height:100%;
     display:flex;
@@ -95,7 +75,8 @@
   }
 
   .advertencia{
-
+    font-family: var(--fuente-arial);
+    font-size: 12px;
   }
 
   .sector-botones{
@@ -148,7 +129,7 @@
   }
 
   .mensaje{
-    background: #ffff;
+    background: var(--fondo-del-encriptador);
     background-image: url("Encriptador.png");
     background-repeat: no-repeat;
     border: none;
