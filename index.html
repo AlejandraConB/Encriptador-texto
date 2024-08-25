@@ -13,35 +13,28 @@
 
 <body>
     <header>
-        <section class="seccion-alura">
-          <div class="contenedor-alura">
-             <img class=imagen-alura src="./assets/logo-alura.png" alt="logo de alura latam" width="50px" height="50px">
-           </div>
-         </section>
+      <img class=imagen-alura src="./assets/logo-alura.png" alt="logo de alura latam" width="50px" height="50px">
     </header>
 
-    <main>
-        <section class="caja-contenido">
-          <div class="contenido-encriptar">
-            <form class="formulario-encriptador">
-                <div class="texto-interior">
-                  <textarea class="area-texto" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
-                  <div class="-texto-info">
-                    <div class="info">
-                        <img class=icono src="./assets/exclamation.png>
-                    <h6 class="advertencia">Solo letras minúsculas y sin acentos</h6>
-                    </div>
-                  <div class="sector-botones">
-              <input class="boton-encriptar-descriptar" type="button" value="Encriptar"/>
-              <input class="boton-encriptar-descriptar"type="button" value="Descriptar"/>
-                </div>
+     <main>
+         <section class="contenido-encriptador">
+            <textarea class="area-texto" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="-texto-info">
+                <img class="icono" src="./assets/exclamation.png" alt="" width="15" height="15">
+                <h6 class="advertencia">Solo letras minúsculas y sin acentos</h6>
             </div>
-          </div>
-        </form>
+            <div class="sector-botones">
+               <button class="boton-encriptar-descriptar" type="button">Encriptar</button>
+                <button class="boton-encriptar-descriptar"type="button">Descriptar</button>
+            </div>
         </section>
 
-        <textare class="area-texto" cols="20" rows=10 placeholder=""></textarea>
-            
+        <section>
+           <textarea class="mensaje" cols="20" rows=10 placeholder=""></textarea>
+           <div>
+              <button class="copiar">Copiar</button>
+           </div>
+        </section>
     </main>
 
   <!-- Pie de página -->
@@ -49,5 +42,5 @@
     <p>&copy;Alejandra Contreras 2024. Chile. </p>
 </footer>
 </body>
-<script>src="app.js"</script>
+<script> src="app.js"</script>
 </html>

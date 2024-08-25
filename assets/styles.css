@@ -27,6 +27,30 @@
       min-height: 100 vh
   }
 
+  .contenido-encriptar{
+    margin: 0 40 px;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;;
+  }
+
+  .area-texto{
+
+  }
+
+  .texto-info{
+
+  }
+
+  .icono{
+
+  }
+
+  .advertencia{
+
+  }
+ /*voy acá */
   .seccion-alura{
     width:100%;
     height:100%;
@@ -46,40 +70,11 @@
     border-radius: 5px;
   }
 
-  .caja-contenido{
-   width: 100%;
-   height: 100%;
-   max-width: 1440 px;
-   margin:auto;
-  }
-  .contenido-encriptar{
-    margin: 0 40 px;
-    width:100%;
-    height:100%;
-    display:flex;
-    justify-content: center;;
-  }
-  .formulario-encriptador{
-    flex-basis: calc(65% - 80px);
-  }
-
   .texto-interior{
     height:100%;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-
-  .area-texto{
-
-  }
-
-  .texto-info{
-
-  }
-
-  .info{
-
   }
 
   .icono{
@@ -89,7 +84,6 @@
   .advertencia{
 
   }
-
 
   .sector-botones{
     display:flex;
@@ -118,6 +112,14 @@
   .boton-encriptar-descriptar:hover{
     cursor:pointer;
     background-color: var(--color-cuaternario);
+  }
+
+  .mensaje{
+
+  }
+
+  .copiar{
+
   }
 
   .pie-pagina > p {
