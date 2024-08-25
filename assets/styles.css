@@ -11,9 +11,10 @@
   :root {
     --color-primario:linear-gradient(to right, #1fefec 0%, #008fd6 100%);
     --color-secundario:#002B5B;
-    --color-terciario:#36C2CE;
-    --color-cuaternario:#159895;
-    --color-encriptador:#A3DFE0;
+    --color-terciario:#77E4C8;
+    --color-cuaternario:#1A5F7A;
+    --color-hover-1:#088395;
+    --color-hover-2:#00FFCA;
     --fuente-arial: arial,sans-serif;
   }
 
@@ -58,7 +59,9 @@
   }
 
   .texto-info{
-
+    color:var(--color-secundario);
+    font-size: 8px;
+    font-family: var(--fuente-arial);
   }
 
   .seccion-alura{
@@ -98,31 +101,50 @@
   .sector-botones{
     display:flex;
     margin-top: 18px;
-    flex-direction: row;
     space:space-between;
-    gap:15px;
+    gap:25px;
   }
 
-  .boton-encriptar-descriptar{
-    width: 120px;
+  .boton-encriptar{
+    width: 180px;
+    padding: 8px 8px;
+    text-align: center;
+    background-color:var(--color-cuaternario);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px; /
+    font-weight: 600;
+    font-family:var(--fuente-arial);
+    color:var(--color-terciario);
+    text-decoration:none;
+    justify-content: center;
+    border: 3px solid var(--color-secundario);
+  }
+
+  .boton-encriptar:hover{
+    cursor:pointer;
+    background-color: var(--color-hover-1);
+  }
+
+  .boton-descriptar{
+    width: 180px;
     padding: 8px 8px;
     text-align: center;
     background-color:var(--color-terciario);
     border-radius: 20px;
+    cursor: pointer;
     font-size: 16px; /
-    font-weight: 600px;
+    font-weight: 600;
     font-family:var(--fuente-arial);
     color:var(--color-secundario);
     text-decoration:none;
-    display:flex;
     justify-content: center;
     border: 3px solid var(--color-secundario);
-    gap: 15px;
   }
 
-  .boton-encriptar-descriptar:hover{
+  .boton-descriptar:hover{
     cursor:pointer;
-    background-color: var(--color-cuaternario);
+    background-color: var(--color-hover-2);
   }
 
   .mensaje{
@@ -142,15 +164,36 @@
     outline: none;
   }
 
-  .copiar{
+  .bott-copiar{
+    border-radius: 20px;
+    border: 3px solid var(--color-secundario);
+    padding: 8px 8px;
+    text-align: center;
+    background-color:var(--color-terciario);
+    cursor: pointer;
+    font-size: 16px; /
+    font-weight: 600;
+    font-family:var(--fuente-arial);
+    color:var(--color-secundario);
+    text-decoration:none;
+    justify-content: center;
+    margin-left: 108px;
+    margin-top: 402px;
+    position: absolute;
+    width: 180px;
+  }
 
+  .bott-copiar:hover{
+    cursor:pointer;
+    background-color: var(--color-hover-2);
   }
 
   .pie-pagina > p {
     background: var(--color-primario);
     color:var(--color-secundario);
-    margin: 0 0 0;
-    padding: 35px;
+    margin-bottom: 0;
+    padding: 3px;
     text-align: center;
+    font-size: 15px;
     font-family:var(--fuente-arial);
   }
