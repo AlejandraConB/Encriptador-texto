@@ -50,7 +50,7 @@
     background:none;
     color:var(--color-secundario);
     margin-top: 70px;
-    text-transform: lowercase;
+    /*text-transform: lowercase;*/
   }
 
   .contenido-encriptador{

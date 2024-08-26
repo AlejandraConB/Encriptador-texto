@@ -1,99 +1,77 @@
 // Configuración de eventos para los botones
-document.querySelector('.boton-encriptar').addEventListener('click', encriptar);
-document.querySelector('.boton-descriptar').addEventListener('click', descriptar);
-document.querySelector('.bott-copiar').addEventListener('click', copiar);
+const areaTexto= document.querySelector(".area-texto"); //textArea
+const mensaje = document.querySelector(".mensaje");
+const botonCopiar = document.querySelector('.bott-copiar');
 
     // Función para validar el texto ingresado
     function validarTexto(texto) {
-        const caracteresInvalidos = /[~!@#$%^&*()_+|}{[\]\\\/?><:"`;.,áéíóúàèìòù']/g;
-        const mayusculas = /[A-Z]/g;  
+        const caracteresIngresados = /[~!@#$%^&*()_+|}{[\]\\\/?><:"`;.,áéíóúàèìòù']/g;
+        const letrasMayusculas = /[A-Z]/g;
         const vacio = "";
 
-        if (texto.match(mayusculas) || texto.match(caracteresInvalidos)) {
-          alert("No se permiten caracteres especiales ni mayúsculas");
-          return false; 
+        if (texto.match(letrasMayusculas) || texto.match(caracteresIngresados)) {
+          alert("Texto inválido, ingrese solo letras minúsculas");
+          return false;
         } else if (texto === vacio) {
-          alert("Ingrese un mensaje para encriptar o desencriptar");
+          alert("Ingrese texto para encriptar o desencriptar");
           return false;
         }
         return true;
       }
 
-// Definimos las reglas de encriptación y desencriptación
-const reglas = {
-    'e': 'enter',
-    'i': 'imes',
-    'a': 'ai',
-    'o': 'ober',
-    'u': 'ufat'
-  };
+//Botón Encriptar
+function botonEncriptar(){
+    const textoEncriptado = encriptar(areaTexto.value);
+    mensaje.value = textoEncriptado;
+    areaTexto.value = ""; //Evaluar si lo agrego
+    mensaje.style.backgroundImage = "none"; //Evaluar si lo agrego
+}
 
-  // Función para encriptar el texto
-  function encriptar() {
-    const textoIngresado = document.querySelector('.area-texto').value;
-    
-    if (validarTexto(textoIngresado)) {
-      const textoEncriptado = textoIngresado.split('').map(char => reglas[char] || char).join('');
-      document.querySelector('.mensaje').value = textoEncriptado;
-    }
-  }
-  
-  // Función para desencriptar el texto
-  function descriptar() {
-    const textoIngresado = document.querySelector('.area-texto').value;
-    
-    if (validarTexto(textoIngresado)) {
-      let textoDesencriptado = textoIngresado;
-      for (const [clave, valor] of Object.entries(reglas)) {
-        textoDesencriptado = textoDesencriptado.split(valor).join(clave);
+// Función para encriptar el texto
+  function encriptar (infoEncriptar) {
+    // Definimos las reglas de encriptación y desencriptación
+    const reglas = { "e":"enter","i":"imes","a":"ai","o":"ober","u":"ufat"};
+    infoEncriptar = infoEncriptar.toLowerCase()
+
+      for (let i = 0; i < reglas.length; i++) {
+        if(infoEncriptar.includes(reglas)){
+            infoEncriptar = stringEncriptar.replaceAll(reglas)
       }
-      document.querySelector('.mensaje').value = textoDesencriptado;
-    }
+      return infoEncriptar;
   }
-   
-  // Función para copiar el texto al portapapeles
-  function copiar() {
-    const mensaje = document.querySelector('.mensaje').value;
-    if (mensaje) {
-      navigator.clipboard.writeText(mensaje).then(() => {
-        alert('Texto copiado al portapapeles!');
-      }).catch(err => {
-        console.error('Error al copiar al portapapeles:', err);
+
+    //Botón desncriptar
+  function botonDescriptar(){
+    const = textoEncriptado = desencriptar(areaTexto.value)
+    mensaje.value = textoEncriptado;
+    textArea.value = "";
+    mensaje.style.backgroundImage = "none";
+    botonCopiar.style.display = "block";
+  }
+
+  // Función para desencriptar el texto
+  function descriptar(infoDescriptar) {
+    // Definimos las reglas de encriptación y desencriptación
+    const reglas = { "e":"enter","i":"imes","a":"ai","o":"ober","u":"ufat"};
+    infoDescriptar = infoDescriptar.toLowerCase()
+
+      for (let i = 0; i < reglas.length; i++) {
+        if(infoDesencriptar.includes(reglas)){
+            infoDescriptar = infoDescriptar.replaceAll(reglas)
+      }
+      return infoDescriptar;
+  }
+
+  //Función para copiar el texto
+function copiarTexto(texto) {
+    navigator.clipboard.writeText(texto)
+    .then(() => {
+        alert("Texto copiado");
+    }).catch(err => {
+        console.error("Error al copiar:", err);
       });
-    } else {
-      alert('No hay texto para copiar');
     }
-  }
-
-  //Código de práctica
-/*function encriptar(){
-
-    let mensaje = document.querySelector(".mensaje").value;
-    let texto = document.querySelector(".area-texto");
-    let letraParaEncriptar = ["e","i","a","u"];
-    let letrasIngresadasMayusculas = /[A-Z]/;
-    let caracteresIngresados = /["~!Q#$%&^*()_+|}{][/¿¡?<>;,.:-`'¨°¬]/;
-    texto = texto.tolowerCase(); 
-
-    if (letrasIngresadasMayusculas || caracteresIngresados){
-        alert = ("Texto inválido, ingrese solo letras minúsculas");
-        } 
-        else{
-            if (letraParaEncriptar == "e"){
-                mensaje = "enter";
-
-            } if (texto == "i"){
-                mensaje = "imes";
-            } else if(texto ==="a"){
-                mensaje = "ai";
-            } else if(texto =="o"){
-                mensaje = "ober";
-            } else if(texto =="u"){
-                mensaje = "ufat";
-            }  
-         else(texto == mensaje){
-
-            }
-        }
-
- } */
+      botonCopiar.addEventListener("click", () => {
+        textoCopiar = mensaje.value;
+        copiarTexto(textoCopiar);
+      });
