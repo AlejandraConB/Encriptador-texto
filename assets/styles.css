@@ -66,9 +66,11 @@
   .mensaje{
     align-items: center;
     width: 25%;
+    height: 420px;
     background: var(--fondo-del-encriptador);
     background-image: url("Encriptador.png");
     background-repeat: no-repeat;
+    background-size:100%;
     border: none;
     border-radius: 24px;
     color:var(--color-secundario);
@@ -77,6 +79,8 @@
     padding-left: 20px;
     position:fixed;
   }
+
+
 
   .mensaje:focus {
     outline: none;
@@ -145,7 +149,7 @@
     text-decoration:none;
     justify-content: center;
     margin-left: 108px;
-    margin-top: 395px;
+    margin-top: 388px;
     position: absolute;
     width: 240px;
     align-items: center;
