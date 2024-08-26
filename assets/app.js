@@ -1,31 +1,31 @@
-const areaTexto = document.querySelector(".area-texto");
-const mensaje = document.querySelector(".mensaje");
+function encriptar (){
 
+let mensaje = document.querySelector(".mensaje");
+let texto = document.querySelector(".area-texto");
 let letraParaEncriptar = ["e","i","a","u"];
 let letrasIngresadasMayusculas = /[A-Z]/;
-let caracteresIngresados = /["~!Q#$%&^*()_+|}{][/\?¿¡<>;,.:-`'¨°¬]/
+let caracteresIngresados = /["~!Q#$%&^*()_+|}{][/\?¿¡<>;,.:-`'¨°¬]/;
 
-function encriptar (textoEncriptar){
-    textoEncriptar = textoEncriptar.tolowerCase()
+texto = texto.tolowerCase();
 
-if (letrasIngresadasMayusculas || caracteresIngresados){
-    alert("Texto inválido, ingrese solo letras minúsculas");
+if (letrasIngresadasMayusculas || caracteresIngresados || ""){
+    alert = "Texto inválido, ingrese solo letras minúsculas";
 } 
     else{
         if (letraParaEncriptar === "e"){
-            console.log("enter");
+            mensaje = "enter";
 
-        } if (letra ==="i"){
-            console.log("imes");
-        } else if(letra ==="a"){
-            console.log("ai");
-        } else if(letra ==="o"){
-            console.log("ober");
-        } else if(letra ==="u"){
-            console.log("ufat");
+        } if (texto ==="i"){
+            mensaje = "imes";
+        } else if(texto ==="a"){
+            mensaje = "ai";
+        } else if(texto ==="o"){
+            mensaje = "ober";
+        } else if(texto ==="u"){
+            mensaje = "ufat";
         }  
-         else{
-            
+         else(texto == mensaje){
+
          }
     }
 }
