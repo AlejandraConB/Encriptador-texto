@@ -1,15 +1,15 @@
-const textArea = document.querySelector(".area-texto");
+const areaTexto = document.querySelector(".area-texto");
 const mensaje = document.querySelector(".mensaje");
 
-//Arreglos multidimensionales => conjunto  de arreglos o arreglos de arreglos
-
 let letraParaEncriptar = ["e","i","a","u"];
+let letrasIngresadasMayusculas = /[A-Z]/;
+let caracteresIngresados = /["~!Q#$%&^*()_+|}{][/\?¿¡<>;,.:-`'¨°¬]/
 
 function encriptar (textoEncriptar){
     textoEncriptar = textoEncriptar.tolowerCase()
 
-if (letra === "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"){
-    console.log("¡Ingrese solo letras minúsculas!");
+if (letrasIngresadasMayusculas || caracteresIngresados){
+    alert("Texto inválido, ingrese solo letras minúsculas");
 } 
     else{
         if (letraParaEncriptar === "e"){
@@ -21,8 +21,11 @@ if (letra === "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"){
             console.log("ai");
         } else if(letra ==="o"){
             console.log("ober");
-        } else (letra ==="u"){
+        } else if(letra ==="u"){
             console.log("ufat");
         }  
+         else{
+            
+         }
     }
 }
