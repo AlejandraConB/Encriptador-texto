@@ -42,7 +42,7 @@ const botonCopiar = document.getElementsById("bott-copiar");
 
     //Botón desncriptar
   function botonDescriptar(){
-    const = textoEncriptado = desencriptar(areaTexto.value);
+    const textoEncriptado = desencriptar(areaTexto.value);
     mensaje.value = textoEncriptado;
     textArea.value = "";
     mensaje.style.backgroundImage = "none";
