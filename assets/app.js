@@ -1,10 +1,10 @@
 // Configuración de eventos para los botones
 const areaTexto = document.querySelector(".area-texto"); //textArea
 const mensaje = document.querySelector(".mensaje");
-const botonCopiar = document.querySelector('.bott-copiar');
+const botonCopiar = document.getElementsById("bott-copiar");
 
     // Función para validar el texto ingresado
-  /*  function validarTexto(texto) {
+    function validarTexto(texto) {
         const caracteresIngresados = /[~!@#$%^&*()_+|}{[\]\\\/?><:"`;.,áéíóúàèìòù']/g;
         const letrasMayusculas = /[A-Z]/g;
         const vacio = "";
@@ -17,7 +17,7 @@ const botonCopiar = document.querySelector('.bott-copiar');
           return false;
         }
         return true;
-      }*/
+      }
 
 //Botón Encriptar
  function botonEncriptar(){
@@ -30,19 +30,19 @@ const botonCopiar = document.querySelector('.bott-copiar');
 // Función para encriptar el texto
   function encriptar (stringEncriptar) {
     // Definimos las reglas de encriptación
-    let reglas = [["e":"enter"],["i":"imes"],["a":"ai"],["o":"ober"],["u":"ufat"]];
-    stringEncriptar = stringEncriptar.toLowerCase()
+    let reglas = [["e":"enter"],["i":"imes"],["a":"ai"],["o":"ober"],["u":"ufat"]]; //matriz
+    stringEncriptar = stringEncriptar.toLowerCase();
 
       for (let i = 0; i < reglas.length; i++) {
-        if(stringEncriptar.includes(reglas[i][0])){
-            stringEncriptar = stringEncriptar.replaceAll(reglas[i][0], reglas[i][1])
+        if(stringEncriptada.includes(reglas[i][0])){
+            stringEncriptada = stringEncriptada.replaceAll(reglas[i][0], reglas[i][1]);
       }
       return stringEncriptar;
   }
 
     //Botón desncriptar
   function botonDescriptar(){
-    const = textoEncriptado = desencriptar(areaTexto.value)
+    const = textoEncriptado = desencriptar(areaTexto.value);
     mensaje.value = textoEncriptado;
     textArea.value = "";
     mensaje.style.backgroundImage = "none";
@@ -50,21 +50,21 @@ const botonCopiar = document.querySelector('.bott-copiar');
   }
 
   // Función para desencriptar el texto
-  function desencriptar(stringDesencriptar) {
+  function desencriptar(stringDesencriptada) {
     // Definimos las reglas de desencriptación
     const reglas = [["e":"enter"],["i":"imes"],["a":"ai"],["o":"ober"],["u":"ufat"]];
-    stringDesencriptar = stringDesencriptar.toLowerCase()
+    stringDesencriptada = stringDesencriptada.toLowerCase();
 
       for (let i = 0; i < reglas.length; i++) {
-        if(stringDesencriptar.includes(reglas[i][1])){
-            stringDesencriptar = stringDesencriptar.replaceAll(reglas[i][0])
+        if(stringDesencriptada.includes(reglas[i][1])){
+            stringDesencriptada = stringDesencriptada.replaceAll(reglas[i][1], reglas[i][0]);
       }
-      return stringDesencriptar;
+      return stringDesencriptada;
   }
 
   //Función para copiar el texto
 function copiarTexto(texto) {
-    navigator.clipboard.writeText(texto)
+    navigator.clipboard.writeText(texto);
     .then(() => {
         alert("Texto copiado");
     }).catch(err => {
