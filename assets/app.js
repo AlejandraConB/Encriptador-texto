@@ -25,12 +25,12 @@ const botonCopiar = document.getElementsById("bott-copiar");
     mensaje.value = textoEncriptado;
     areaTexto.value = "";
     mensaje.style.backgroundImage = "none"; //Imagen de fondo desaparezca
-} 
+}
 
 // Función para encriptar el texto
   function encriptar (stringEncriptar) {
     // Definimos las reglas de encriptación
-    let reglas = [["e":"enter"],["i":"imes"],["a":"ai"],["o":"ober"],["u":"ufat"]]; //matriz
+    let reglas = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]]; //matriz
     stringEncriptar = stringEncriptar.toLowerCase();
 
       for (let i = 0; i < reglas.length; i++) {
@@ -52,7 +52,7 @@ const botonCopiar = document.getElementsById("bott-copiar");
   // Función para desencriptar el texto
   function desencriptar(stringDesencriptada) {
     // Definimos las reglas de desencriptación
-    const reglas = [["e":"enter"],["i":"imes"],["a":"ai"],["o":"ober"],["u":"ufat"]];
+    const reglas = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
     stringDesencriptada = stringDesencriptada.toLowerCase();
 
       for (let i = 0; i < reglas.length; i++) {
