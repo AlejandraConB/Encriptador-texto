@@ -1,7 +1,6 @@
 // Configuración de eventos para los botones
 const areaTexto = document.querySelector(".area-texto"); //textArea
 const mensaje = document.querySelector(".mensaje");
-//const botonCopiar = document.querySelector(".bott-copiar");
 
    /*  Función para validar el texto ingresado
     function validarTexto(texto) {
@@ -45,7 +44,7 @@ const mensaje = document.querySelector(".mensaje");
   function botonDescriptar(){
     const textoEncriptado = desencriptar(areaTexto.value);
     mensaje.value = textoEncriptado;
-    textArea.value = "";
+    areaTexto.value = "";
     mensaje.style.backgroundImage = "none";
     botonCopiar.style.display = "block";
   }
@@ -65,7 +64,19 @@ const mensaje = document.querySelector(".mensaje");
   }
 
   //Función para copiar el texto
-/*function copiarTexto(texto) {
+ /* let texto = areaCopiar(mensaje.value);
+  areaTexto
+
+  const botonCopiar = async () => {
+    try {
+      await navigator.clipboard.writeText(texto);
+      console.log("Contenido copiado al portapapeles");
+    } catch (err) {
+      console.error("Error al copiar: ',err");
+    }
+  }
+*/
+  /*  function copiarTexto(texto) {
     navigator.clipboard.writeText(texto);
     .then(() => {
       alert("Texto copiado");
@@ -73,8 +84,8 @@ const mensaje = document.querySelector(".mensaje");
         console.error("Error al copiar:", err);
       });
     }
+
       botonCopiar.addEventListener("click", () => {
         textoCopiar = mensaje.value;
         copiarTexto(textoCopiar);
-      })
-  } } */
+      }) */
